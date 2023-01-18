@@ -223,7 +223,6 @@ compiler.js	logError
 compiler.js	logError
 compiler.js	canSetHTMLColors
 compiler.js	codeMirrorFn
-compiler.js	CodeMirror
 compiler.js	errorCount
 compiler.js	consolePrint
 compiler.js	matchCache
@@ -295,20 +294,6 @@ debug.js	consolePrint
 debug.js	curlevel
 editor.js	storage_has
 editor.js	storage_get
-editor.js	CodeMirror
-editor.js	CodeMirror
-editor.js	CodeMirror
-editor.js	CodeMirror
-editor.js	CodeMirror
-editor.js	CodeMirror
-editor.js	CodeMirror
-editor.js	CodeMirror
-editor.js	CodeMirror
-editor.js	CodeMirror
-editor.js	CodeMirror
-editor.js	CodeMirror
-editor.js	CodeMirror
-editor.js	CodeMirror
 editor.js	playSound
 editor.js	prevent
 editor.js	compile
@@ -322,8 +307,6 @@ editor.js	compile
 editor.js	clearConsole
 editor.js	unloadGame
 editor.js	compile
-editor.js	CodeMirror
-editor.js	CodeMirror
 editor.js	diffToVisualize
 editor.js	debug_visualisation_array
 editor.js	redraw

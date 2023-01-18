@@ -1,3 +1,5 @@
+const CodeMirror = window.CodeMirror
+
 ;("use strict")
 
 function isColor(str) {

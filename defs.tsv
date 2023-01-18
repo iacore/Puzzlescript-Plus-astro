@@ -102,6 +102,8 @@ sfxr.js	showAudioButton	976	function showAudioButton() {
 sfxr.js	toggleMute	985	function toggleMute() {
 sfxr.js	muteAudio	993	function muteAudio() {
 sfxr.js	unMuteAudio	1003	function unMuteAudio() {
+colors.js	colorPalettesAliases	0	const colorPalettesAliases = {
+colors.js	colorPalettes	17	const colorPalettes = {
 colors.js	reg_color_names	392	var reg_color_names =
 colors.js	reg_color	395	var reg_color =
 graphics.js	createSprite	2	function createSprite(name, spritegrid, colors, padding) {
@@ -136,6 +138,9 @@ graphics.js	forceRegenImages	1000	var forceRegenImages = false
 graphics.js	textcellwidth	1002	var textcellwidth = 0
 graphics.js	textcellheight	1003	var textcellheight = 0
 graphics.js	canvasResize	1005	function canvasResize() {
+graphics.js	EasingFunctions	1119	const EasingFunctions = {
+graphics.js	easingAliases	1151	const easingAliases = {
+mobile.js	Mobile	4	const Mobile = {}
 mobile.js	Animator	749	let Animator = function () {
 mobile.js	Animatable	809	function Animatable(key, increment, update) {
 inputoutput.js	keyRepeatTimer	0	var keyRepeatTimer = 0
@@ -464,6 +469,7 @@ compiler.js	qualifyURL	3689	function qualifyURL(url) {
 compiler.js	isSitelocked	3695	function isSitelocked() {
 soundbar.js	newSound	2	function newSound(instrument) {
 soundbar.js	buttonPress	26	function buttonPress() {
+toolbar.js	maximumsavedprojects	4	const maximumsavedprojects = 50
 toolbar.js	solveClick	6	function solveClick() {
 toolbar.js	runClick	16	function runClick() {
 toolbar.js	cancelClick	21	function cancelClick() {
@@ -473,6 +479,8 @@ toolbar.js	loadDropDownChange	133	function loadDropDownChange() {
 toolbar.js	repopulateSaveDropdown	168	function repopulateSaveDropdown(saves) {
 toolbar.js	loadDropdown	201	var loadDropdown = document.getElementById("loadDropDown")
 toolbar.js	levelEditorClick_Fn	204	function levelEditorClick_Fn() {
+toolbar.js	HOSTPAGEURL	218	const HOSTPAGEURL = "https://auroriax.github.io/PuzzleScript"
+toolbar.js	PSFORKNAME	219	const PSFORKNAME = "Puzzlescript Plus"
 toolbar.js	getAuthURL	223	function getAuthURL() {
 toolbar.js	printUnauthorized	236	function printUnauthorized() {
 toolbar.js	shareClick	250	function shareClick() {
@@ -515,6 +523,7 @@ addlisteners_editor.js	gestureHandler	76	var gestureHandler = Mobile.enable()
 makegif.js	makeGIF	0	function makeGIF() {
 solver.js	abortSolver	0	var abortSolver = false
 solver.js	solving	1	var solving = false
+solver.js	timeout	3	const timeout = (ms) => new Promise((res) => setTimeout(res, ms))
 solver.js	byScoreAndLength	5	function byScoreAndLength(a, b) {
 solver.js	stopSolving	194	function stopSolving() {
 solver.js	chunkString	198	function chunkString(str, length) {

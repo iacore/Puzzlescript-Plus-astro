@@ -1,3 +1,5 @@
+const CodeMirror = window.CodeMirror
+
 var code = document.getElementById("code")
 var _editorDirty = false
 var _editorCleanState = ""
