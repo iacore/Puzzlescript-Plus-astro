@@ -6,7 +6,6 @@ var inputHistory = []
 var compiledText
 var canOpenEditor = true
 var IDE = true
-var solving = false
 
 var debugger_turnIndex = 0
 var debug_visualisation_array = []

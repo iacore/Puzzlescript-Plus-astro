@@ -1,8 +1,8 @@
 import re, glob, os
-r_var = re.compile(r"var (\w+) =.*")
-r_let = re.compile(r"let (\w+) =.*")
-r_const = re.compile(r"const (\w+) =.*")
-r_func = re.compile(r"function (\w+).*")
+r_var = re.compile(r"var ([_\w0-9]+)( =)?.*")
+r_let = re.compile(r"let ([_\w0-9]+)( =)?.*")
+r_const = re.compile(r"const ([_\w0-9]+)( =)?.*")
+r_func = re.compile(r"(?:async )?function ([_\w0-9]+).*")
 
 
 for jsfile in glob.glob('src/js/*'):

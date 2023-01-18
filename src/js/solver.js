@@ -1,3 +1,5 @@
+import FastPriorityQueue from "../lib/FastPriorityQueue"
+
 var abortSolver = false
 var solving = false
 

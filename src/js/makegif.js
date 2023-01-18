@@ -1,3 +1,5 @@
+import { GIFEncoder } from "../lib/jsgif"
+
 function makeGIF() {
   var randomseed = RandomGen.seed
   levelEditorOpened = false

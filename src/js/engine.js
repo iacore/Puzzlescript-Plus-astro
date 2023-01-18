@@ -1659,7 +1659,7 @@ function DoUndo(
 function getPlayerPositions() {
   var result = []
   var playerMask = state.playerMask
-  for (i = 0; i < level.n_tiles; i++) {
+  for (let i = 0; i < level.n_tiles; i++) {
     level.getCellInto(i, _o11)
     if (playerMask.anyBitsInCommon(_o11)) {
       result.push(i)
@@ -2310,8 +2310,22 @@ CellPattern.prototype.toJSON = function () {
   ]
 }
 
-var _o1, _o2, _o2_5, _o3, _o4, _o5, _o6, _o7, _o8, _o9, _o10, _o11, _o12
-var _m1, _m2, _m3
+var _o1
+var _o2
+var _o2_5
+var _o3
+var _o4
+var _o5
+var _o6
+var _o7
+var _o8
+var _o9
+var _o10
+var _o11
+var _o12
+var _m1
+var _m2
+var _m3
 
 CellPattern.prototype.replace = function (rule, currentIndex) {
   var replace = this.replacement

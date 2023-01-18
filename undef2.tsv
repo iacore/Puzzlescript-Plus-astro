@@ -25,7 +25,6 @@ buildStandalone.js	state
 buildStandalone.js	state
 buildStandalone.js	state
 buildStandalone.js	state
-buildStandalone.js	savePlainTextFile
 compiler.js	colorPalettes
 compiler.js	logError
 compiler.js	STRIDE_OBJ
@@ -521,13 +520,8 @@ engine.js	level
 engine.js	levelEditorOpened
 engine.js	verbose_logging
 engine.js	consolePrint
-engine.js	i
-engine.js	i
 engine.js	level
-engine.js	i
 engine.js	level
-engine.js	i
-engine.js	i
 engine.js	level
 engine.js	level
 engine.js	level
@@ -1682,7 +1676,6 @@ makegif.js	cellheight
 makegif.js	inputHistory
 makegif.js	unitTesting
 makegif.js	compiledText
-makegif.js	GIFEncoder
 makegif.js	compile
 makegif.js	curlevel
 makegif.js	canvasResize
@@ -1759,7 +1752,6 @@ solver.js	deltatime
 solver.js	deltatime
 solver.js	state
 solver.js	level
-solver.js	FastPriorityQueue
 solver.js	level
 solver.js	consolePrint
 solver.js	consolePrint
