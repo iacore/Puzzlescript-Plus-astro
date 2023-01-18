@@ -8,7 +8,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "link-the-soup": "eslint -f unix src/the-soup.js"
   },
   "dependencies": {
     "@codemirror/language": "^6.4.0",
