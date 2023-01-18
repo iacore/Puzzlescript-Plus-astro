@@ -4596,7 +4596,7 @@ function RNG(seed) {
   this.seed = seed
   if (seed == null) {
     seed = (Math.random() + Date.now()).toString()
-    //window.console.log("setting random seed "+seed);
+    //console.log("setting random seed "+seed);
     //print_call_stack();
   } else if (typeof seed === "function") {
     // Use it as a uniform number generator
@@ -4608,7 +4608,7 @@ function RNG(seed) {
   } else if (Object.prototype.toString.call(seed) !== "[object String]") {
     seed = JSON.stringify(seed)
   } else {
-    //window.console.log("setting seed "+seed);
+    //console.log("setting seed "+seed);
     //print_call_stack();
   }
   this._normal = null
@@ -4899,7 +4899,7 @@ function checkAudioContextExists() {
       }
     }
   } catch (ex) {
-    window.console.log(ex)
+    console.log(ex)
   }
 }
 
@@ -5531,7 +5531,7 @@ if (typeof AUDIO_CONTEXT == "undefined") {
 }
 
 SoundEffect.generate = function (ps) {
-  /*  window.console.log(ps.wave_type + "\t" + ps.seed);
+  /*  console.log(ps.wave_type + "\t" + ps.seed);
 
   var psstring="";
   for (var n in ps) {
@@ -5539,8 +5539,8 @@ SoundEffect.generate = function (ps) {
       psstring = psstring +"result." + n+" = " + ps[n] + ";\n";
     }
   }
-window.console.log(ps);
-window.console.log(psstring);*/
+console.log(ps);
+console.log(psstring);*/
   function repeat() {
     rep_time = 0
 
@@ -7465,7 +7465,7 @@ const easingAliases = {
  * Add gesture support for mobile devices.
  */
 
-const Mobile = window.Mobile = {}
+const Mobile = {}
 
 //stolen from https://github.com/Modernizr/Modernizr/blob/master/feature-detects/touchevents.js
 Mobile.hasTouch = function () {
@@ -7494,7 +7494,7 @@ Mobile.enable = function (force) {
   return Mobile._instance
 }
 
-window.Mobile.GestureHandler = function () {
+Mobile.GestureHandler = function () {
   this.initialize.apply(this, arguments)
 }
 
@@ -8200,28 +8200,8 @@ Mobile.debugDot = function (event) {
 
   /** Audio Methods **/
 
-  proto.disableAudio = function () {
-    // Overwrite the playseed function to disable it.
-    window.playSeed = function () {}
-  }
-
   proto.isAudioSupported = function () {
-    var isAudioSupported = true
-
-    if (typeof webkitAudioContext !== "undefined") {
-      // We may be on Mobile Safari, which throws up
-      // 'Operation not Supported' alerts when we attempt to
-      // play Audio elements with "data:audio/wav;base64"
-      // encoded HTML5 Audio elements.
-      //
-      // Switching to MP3 encoded audio may be the way we have
-      // to go to get Audio working on mobile devices.
-      //
-      // e.g. https://github.com/rioleo/webaudio-api-synthesizer
-      isAudioSupported = false
-    }
-
-    return isAudioSupported
+    return true
   }
 
   /** Other HTML5 Stuff **/
@@ -8231,9 +8211,9 @@ Mobile.debugDot = function (event) {
     body = document.getElementsByTagName("body")[0]
     body.setAttribute("class", body.getAttribute("class") + " disable-select")
   }
-})(window.Mobile.GestureHandler.prototype)
+})(Mobile.GestureHandler.prototype)
 
-let Animator = window.Animator = function () {
+let Animator = function () {
   this.initialize.apply(this, arguments)
 }
 
@@ -8333,58 +8313,7 @@ function Animatable(key, increment, update) {
   return handles
 }
 
-// http://paulirish.com/2011/requestanimationframe-for-smart-animating/
-// http://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smart-er-animating
-
-// requestAnimationFrame polyfill by Erik Möller. fixes from Paul Irish and Tino Zijdel
-
-// MIT license
-
-(function () {
-  "use strict"
-
-  var VENDORS = ["ms", "moz", "webkit", "o"]
-  var index, lastTime
-
-  // for (
-  //   index = 0;
-  //   index < VENDORS.length && !window.requestAnimationFrame;
-  //   index++
-  // ) {
-  //   window.requestAnimationFrame =
-  //     window[VENDORS[index] + "RequestAnimationFrame"]
-  //   window.cancelAnimationFrame =
-  //     window[VENDORS[index] + "CancelAnimationFrame"]
-  //   if (!window.cancelAnimationFrame) {
-  //     window.cancelAnimationFrame =
-  //       window[VENDORS[index] + "CancelRequestAnimationFrame"]
-  //   }
-  // }
-
-  // if (!window.requestAnimationFrame) {
-  //   lastTime = 0
-  //   window.requestAnimationFrame = function (callback, element) {
-  //     var currTime, timeToCall, id
-
-  //     currTime = new Date().getTime()
-  //     timeToCall = Math.max(0, 16 - (currTime - lastTime))
-  //     id = window.setTimeout(function () {
-  //       callback(currTime + timeToCall)
-  //     }, timeToCall)
-  //     lastTime = currTime + timeToCall
-
-  //     return id
-  //   }
-  // }
-
-  // if (!window.cancelAnimationFrame) {
-  //   window.cancelAnimationFrame = function (id) {
-  //     clearTimeout(id)
-  //   }
-  // }
-
-  Mobile.enable()
-})()
+Mobile.enable()
 
 // @@end js/mobile.js
 
@@ -9264,7 +9193,7 @@ function onKeyDown(event) {
 
   if (
     lastDownTarget === canvas ||
-    (window.Mobile && lastDownTarget === window.Mobile.focusIndicator)
+    (Mobile && lastDownTarget === Mobile.focusIndicator)
   ) {
     if (keybuffer.indexOf(event.keyCode) === -1) {
       if (event && (event.ctrlKey || event.metaKey)) {
@@ -9428,7 +9357,7 @@ function mouseMove(event) {
   }
 
   event.handled = true
-  //window.console.log("showcoord ("+ canvas.width+","+canvas.height+") ("+x+","+y+")");
+  //console.log("showcoord ("+ canvas.width+","+canvas.height+") ("+x+","+y+")");
 }
 
 let mouseInCanvas = false
@@ -9689,25 +9618,25 @@ function checkKey(e, justPressed) {
   switch (e.keyCode) {
     case 65: //a
     case 37: { //left
-      //           window.console.log("LEFT");
+      //           console.log("LEFT");
       inputdir = 1
       break
     }
     case 38: //up
     case 87: { //w
-      //            window.console.log("UP");
+      //            console.log("UP");
       inputdir = 0
       break
     }
     case 68: //d
     case 39: { //right
-      //            window.console.log("RIGHT");
+      //            console.log("RIGHT");
       inputdir = 3
       break
     }
     case 83: //s
     case 40: { //down
-      //            window.console.log("DOWN");
+      //            console.log("DOWN");
       inputdir = 2
       break
     }
@@ -9719,7 +9648,7 @@ function checkKey(e, justPressed) {
     case 32: //space
     case 67: //c
     case 88: { //x
-      //            window.console.log("ACTION");
+      //            console.log("ACTION");
       if (justPressed && ignoreNotJustPressedAction) {
         ignoreNotJustPressedAction = false
       }
@@ -12967,7 +12896,7 @@ let ymax
       break
     }
     default: {
-      window.console.log("EEEP " + direction)
+      console.log("EEEP " + direction)
     }
   }
 
@@ -13053,7 +12982,7 @@ function matchCellRowWildCard(
       break
     }
     default: {
-      window.console.log("EEEP2 " + direction)
+      console.log("EEEP2 " + direction)
     }
   }
 
@@ -13080,7 +13009,7 @@ function matchCellRowWildCard(
           //right
           kmax = level.width - (x + len) + 1
         } else {
-          window.console.log("EEEP2 " + direction)
+          console.log("EEEP2 " + direction)
         }
 
         result.push.apply(
@@ -13111,7 +13040,7 @@ function matchCellRowWildCard(
           // up
           kmax = y - len + 2
         } else {
-          window.console.log("EEEP2 " + direction)
+          console.log("EEEP2 " + direction)
         }
         result.push.apply(
           result,
@@ -15586,7 +15515,7 @@ var codeMirrorFn = function () {
                 return "COLOR FADECOLOR"
               }
               default: {
-                window.console.logError("EEK shouldn't get here.")
+                console.logError("EEK shouldn't get here.")
               }
             }
             break
@@ -20317,9 +20246,9 @@ function loadFile(str) {
   delete state.loops
   /*
 	var lines = stripComments(str);
-	window.console.log(lines);
+	console.log(lines);
 	var sections = generateSections(lines);
-	window.console.log(sections);
+	console.log(sections);
 	var sss = generateSemiStructuredSections(sections);*/
   return state
 }
@@ -21215,7 +21144,7 @@ window.addEventListener("resize", resize_all, false)
 window.addEventListener("load", reset_panels, false)
 
 /* https://github.com/ndrake/PuzzleScript/commit/de4ac2a38865b74e66c1d711a25f0691079a290d */
-window.onbeforeunload = function (e) {
+window.addEventListener('beforeunload', (e) => {
   var e = e || window.event
   var msg = "You have unsaved changes!"
 
@@ -21228,7 +21157,7 @@ window.onbeforeunload = function (e) {
     // For Safari
     return msg
   }
-}
+})
 
 var gestureHandler = Mobile.enable()
 if (gestureHandler) {

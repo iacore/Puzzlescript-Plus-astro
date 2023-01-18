@@ -1,4 +1,3 @@
-// @@begin js/FastPriorityQueue.js
 /**
  * FastPriorityQueue.js : a fast heap-based priority queue  in JavaScript.
  * (c) the authors
@@ -260,7 +259,5 @@ FastPriorityQueue.prototype.kSmallest = function (k) {
   }
   return smallest
 }
-
-// @@end js/FastPriorityQueue.js
 
 export default FastPriorityQueue
