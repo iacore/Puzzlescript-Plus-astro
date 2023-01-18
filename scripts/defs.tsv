@@ -1,0 +1,577 @@
+storagewrapper.js	storage_has	0	function	function storage_has(key) {
+storagewrapper.js	storage_get	4	function	function storage_get(key) {
+storagewrapper.js	storage_set	8	function	function storage_set(key, value) {
+storagewrapper.js	storage_remove	12	function	function storage_remove(key) {
+debug.js	canSetHTMLColors	0	var	var canSetHTMLColors = false
+debug.js	canDump	1	var	var canDump = true
+debug.js	canYoutube	2	var	var canYoutube = false
+debug.js	recordingStartsFromLevel	3	var	var recordingStartsFromLevel = 0
+debug.js	inputHistory	4	var	var inputHistory = []
+debug.js	compiledText	5	var	var compiledText
+debug.js	canOpenEditor	6	var	var canOpenEditor = true
+debug.js	IDE	7	var	var IDE = true
+debug.js	debugger_turnIndex	9	var	var debugger_turnIndex = 0
+debug.js	debug_visualisation_array	10	var	var debug_visualisation_array = []
+debug.js	diffToVisualize	11	var	var diffToVisualize = null
+debug.js	convertLevelToString	13	function	function convertLevelToString() {
+debug.js	stripHTMLTags	40	function	function stripHTMLTags(html_str) {
+debug.js	dumpTestCase	47	function	function dumpTestCase() {
+debug.js	clearInputHistory	105	function	function clearInputHistory() {
+debug.js	pushInput	112	function	function pushInput(inp) {
+globalVariables.js	unitTesting	0	var	var unitTesting = false
+globalVariables.js	curlevel	1	var	var curlevel = 0
+globalVariables.js	solvedSections	2	var	var solvedSections = []
+globalVariables.js	curlevelTarget	3	var	var curlevelTarget = null
+globalVariables.js	hasUsedCheckpoint	4	var	var hasUsedCheckpoint = false
+globalVariables.js	levelEditorOpened	5	var	var levelEditorOpened = false
+globalVariables.js	muted	6	var	var muted = 0
+globalVariables.js	runrulesonlevelstart_phase	7	var	var runrulesonlevelstart_phase = false
+globalVariables.js	ignoreNotJustPressedAction	8	var	var ignoreNotJustPressedAction = true
+globalVariables.js	doSetupTitleScreenLevelContinue	10	function	function doSetupTitleScreenLevelContinue() {
+globalVariables.js	verbose_logging	35	var	var verbose_logging = false
+globalVariables.js	throttle_movement	36	var	var throttle_movement = false
+globalVariables.js	cache_console_messages	37	var	var cache_console_messages = false
+globalVariables.js	quittingTitleScreen	38	var	var quittingTitleScreen = false
+globalVariables.js	quittingMessageScreen	39	var	var quittingMessageScreen = false
+globalVariables.js	deltatime	40	var	var deltatime = 17
+globalVariables.js	timer	41	var	var timer = 0
+globalVariables.js	repeatinterval	42	var	var repeatinterval = 150
+globalVariables.js	autotick	43	var	var autotick = 0
+globalVariables.js	autotickinterval	44	var	var autotickinterval = 0
+globalVariables.js	winning	45	var	var winning = false
+globalVariables.js	againing	46	var	var againing = false
+globalVariables.js	againinterval	47	var	var againinterval = 150
+globalVariables.js	norepeat_action	48	var	var norepeat_action = false
+globalVariables.js	oldflickscreendat	49	var	var oldflickscreendat = [] //used for buffering old flickscreen/scrollscreen positions, in case player vanishes
+globalVariables.js	keybuffer	50	var	var keybuffer = []
+globalVariables.js	tweeninterval	52	var	var tweeninterval = 0
+globalVariables.js	tweentimer	53	var	var tweentimer = 0
+globalVariables.js	restarting	55	var	var restarting = false
+globalVariables.js	messageselected	57	var	var messageselected = false
+globalVariables.js	textImages	59	var	var textImages = {}
+globalVariables.js	initLevel	60	var	var initLevel = {
+globalVariables.js	level	81	var	var level = initLevel
+rng.js	RC4	37	function	function RC4(seed) {
+rng.js	print_call_stack	79	function	function print_call_stack() {
+rng.js	RNG	91	function	function RNG(seed) {
+riffwave.js	FastBase64_chars	22	var	var FastBase64_chars =
+riffwave.js	FastBase64_encLookup	24	var	var FastBase64_encLookup = []
+riffwave.js	FastBase64_Init	26	function	function FastBase64_Init() {
+riffwave.js	FastBase64_Encode	33	function	function FastBase64_Encode(src) {
+riffwave.js	u32ToArray	62	function	function u32ToArray(i) {
+riffwave.js	u16ToArray	66	function	function u16ToArray(i) {
+riffwave.js	MakeRiff	70	function	function MakeRiff(sampleRate, bitsPerSample, data) {
+sfxr.js	SOUND_VOL	0	var	var SOUND_VOL = 0.25
+sfxr.js	SAMPLE_RATE	1	var	var SAMPLE_RATE = 5512
+sfxr.js	BIT_DEPTH	2	var	var BIT_DEPTH = 8
+sfxr.js	SQUARE	4	var	var SQUARE = 0
+sfxr.js	SAWTOOTH	5	var	var SAWTOOTH = 1
+sfxr.js	SINE	6	var	var SINE = 2
+sfxr.js	NOISE	7	var	var NOISE = 3
+sfxr.js	TRIANGLE	8	var	var TRIANGLE = 4
+sfxr.js	BREAKER	9	var	var BREAKER = 5
+sfxr.js	SHAPES	11	var	var SHAPES = ["square", "sawtooth", "sine", "noise", "triangle", "breaker"]
+sfxr.js	AUDIO_CONTEXT	13	var	var AUDIO_CONTEXT
+sfxr.js	checkAudioContextExists	15	function	function checkAudioContextExists() {
+sfxr.js	masterVolume	30	var	var masterVolume = 1.0
+sfxr.js	Params	33	function	function Params() {
+sfxr.js	rng	83	var	var rng
+sfxr.js	seeded	84	var	var seeded = false
+sfxr.js	frnd	85	function	function frnd(range) {
+sfxr.js	rnd	93	function	function rnd(max) {
+sfxr.js	pickupCoin	101	function	function pickupCoin() {
+sfxr.js	laserShoot	121	function	function laserShoot() {
+sfxr.js	explosion	160	function	function explosion() {
+sfxr.js	birdSound	193	function	function birdSound() {
+sfxr.js	pushSound	380	function	function pushSound() {
+sfxr.js	powerUp	406	function	function powerUp() {
+sfxr.js	hitHurt	433	function	function hitHurt() {
+sfxr.js	jump	448	function	function jump() {
+sfxr.js	blipSelect	466	function	function blipSelect() {
+sfxr.js	random	482	function	function random() {
+sfxr.js	generators	521	var	var generators = [
+sfxr.js	generatorNames	534	var	var generatorNames = [
+sfxr.js	generateFromSeed	550	function	function generateFromSeed(seed) {
+sfxr.js	SoundEffect	561	function	function SoundEffect(length, sample_rate) {
+sfxr.js	ULBS	570	function	function ULBS() {
+sfxr.js	sfxCache	930	var	var sfxCache = {}
+sfxr.js	cachedSeeds	931	var	var cachedSeeds = []
+sfxr.js	CACHE_MAX	932	var	var CACHE_MAX = 50
+sfxr.js	cacheSeed	934	function	function cacheSeed(seed) {
+sfxr.js	playSound	957	function	function playSound(seed) {
+sfxr.js	killAudioButton	967	function	function killAudioButton() {
+sfxr.js	showAudioButton	976	function	function showAudioButton() {
+sfxr.js	toggleMute	985	function	function toggleMute() {
+sfxr.js	muteAudio	993	function	function muteAudio() {
+sfxr.js	unMuteAudio	1003	function	function unMuteAudio() {
+colors.js	colorPalettesAliases	0	const	const colorPalettesAliases = {
+colors.js	colorPalettes	17	const	const colorPalettes = {
+colors.js	reg_color_names	392	var	var reg_color_names =
+colors.js	reg_color	395	var	var reg_color =
+graphics.js	createSprite	2	function	function createSprite(name, spritegrid, colors, padding) {
+graphics.js	renderSprite	15	function	function renderSprite(spritectx, spritegrid, colors, padding, x, y) {
+graphics.js	drawTextWithCustomFont	47	function	function drawTextWithCustomFont(txt, ctx, x, y) {
+graphics.js	textsheetCanvas	59	var	var textsheetCanvas = null
+graphics.js	regenText	61	function	function regenText(spritecanvas, spritectx) {
+graphics.js	editor_s_grille	100	var	var editor_s_grille = [
+graphics.js	spriteimages	108	var	var spriteimages
+graphics.js	spritesheetCanvas	109	var	var spritesheetCanvas = null
+graphics.js	regenSpriteImages	110	function	function regenSpriteImages() {
+graphics.js	glyphImagesCorrespondance	167	var	var glyphImagesCorrespondance
+graphics.js	glyphImages	168	var	var glyphImages
+graphics.js	glyphHighlight	169	var	var glyphHighlight
+graphics.js	glyphHighlightDiff	170	var	var glyphHighlightDiff
+graphics.js	glyphHighlightResize	171	var	var glyphHighlightResize
+graphics.js	glyphPrintButton	172	var	var glyphPrintButton
+graphics.js	glyphMouseOver	173	var	var glyphMouseOver
+graphics.js	glyphSelectedIndex	174	var	var glyphSelectedIndex = 0
+graphics.js	editorRowCount	175	var	var editorRowCount = 1
+graphics.js	editorGlyphMovements	176	var	var editorGlyphMovements = []
+graphics.js	canvasdict	178	var	var canvasdict = {}
+graphics.js	makeSpriteCanvas	179	function	function makeSpriteCanvas(name) {
+graphics.js	generateGlyphImages	192	function	function generateGlyphImages() {
+graphics.js	x	358	var	var x = 0
+graphics.js	y	359	var	var y = 0
+graphics.js	cellwidth	360	var	var cellwidth
+graphics.js	cellheight	361	var	var cellheight
+graphics.js	xoffset	362	var	var xoffset
+graphics.js	yoffset	363	var	var yoffset
+graphics.js	screenOffsetX	364	let	let screenOffsetX = 0
+graphics.js	screenOffsetY	365	let	let screenOffsetY = 0
+graphics.js	canvas	366	var	var canvas = document.getElementById("gameCanvas")
+graphics.js	ctx	367	var	var ctx = canvas.getContext("2d")
+graphics.js	glyphCount	370	function	function glyphCount() {
+graphics.js	redraw	380	function	function redraw() {
+graphics.js	drawSmoothScreenDebug	783	function	function drawSmoothScreenDebug(ctx) {
+graphics.js	drawEditorIcons	870	function	function drawEditorIcons(mini, minj) {
+graphics.js	lastDownTarget	994	var	var lastDownTarget
+graphics.js	oldcellwidth	996	var	var oldcellwidth = 0
+graphics.js	oldcellheight	997	var	var oldcellheight = 0
+graphics.js	oldtextmode	998	var	var oldtextmode = -1
+graphics.js	oldfgcolor	999	var	var oldfgcolor = -1
+graphics.js	forceRegenImages	1000	var	var forceRegenImages = false
+graphics.js	textcellwidth	1002	var	var textcellwidth = 0
+graphics.js	textcellheight	1003	var	var textcellheight = 0
+graphics.js	canvasResize	1005	function	function canvasResize() {
+graphics.js	EasingFunctions	1119	const	const EasingFunctions = {
+graphics.js	easingAliases	1151	const	const easingAliases = {
+mobile.js	Mobile	4	const	const Mobile = {}
+mobile.js	Animator	749	let	let Animator = function () {
+mobile.js	Animatable	809	function	function Animatable(key, increment, update) {
+inputoutput.js	keyRepeatTimer	0	var	var keyRepeatTimer = 0
+inputoutput.js	keyRepeatIndex	1	var	var keyRepeatIndex = 0
+inputoutput.js	input_throttle_timer	2	var	var input_throttle_timer = 0.0
+inputoutput.js	lastinput	3	var	var lastinput = -100
+inputoutput.js	dragging	5	var	var dragging = false
+inputoutput.js	rightdragging	6	var	var rightdragging = false
+inputoutput.js	columnAdded	7	var	var columnAdded = false
+inputoutput.js	selectText	9	function	function selectText(containerid, e) {
+inputoutput.js	recalcLevelBounds	34	function	function recalcLevelBounds() {}
+inputoutput.js	arrCopy	36	function	function arrCopy(from, fromoffset, to, tooffset, len) {
+inputoutput.js	adjustLevel	40	function	function adjustLevel(level, widthdelta, heightdelta) {
+inputoutput.js	addLeftColumn	56	function	function addLeftColumn() {
+inputoutput.js	addRightColumn	66	function	function addRightColumn() {
+inputoutput.js	addTopRow	76	function	function addTopRow() {
+inputoutput.js	addBottomRow	86	function	function addBottomRow() {
+inputoutput.js	removeLeftColumn	96	function	function removeLeftColumn() {
+inputoutput.js	removeRightColumn	109	function	function removeRightColumn() {
+inputoutput.js	removeTopRow	122	function	function removeTopRow() {
+inputoutput.js	removeBottomRow	134	function	function removeBottomRow() {
+inputoutput.js	matchGlyph	147	function	function matchGlyph(inputmask, glyphAndMask) {
+inputoutput.js	htmlEntityMap	179	var	var htmlEntityMap = {
+inputoutput.js	selectableint	188	var	var selectableint = 0
+inputoutput.js	printLevel	190	function	function printLevel() {
+inputoutput.js	levelEditorClick	236	function	function levelEditorClick(event, click) {
+inputoutput.js	levelEditorRightClick	300	function	function levelEditorRightClick(event, click) {
+inputoutput.js	getTilesTraversingPoints	336	function	function getTilesTraversingPoints(x1, y1, x2, y2) {
+inputoutput.js	lastCoord	521	var	var lastCoord
+inputoutput.js	x1	523	var	var x1 = 5
+inputoutput.js	y1	524	var	var y1 = 5
+inputoutput.js	x2	525	var	var x2 = 5
+inputoutput.js	y2	526	var	var y2 = 5
+inputoutput.js	amountOfLevelsOnScreen	527	let	let amountOfLevelsOnScreen = 0
+inputoutput.js	mouseAction	529	function	function mouseAction(event, click, id) {
+inputoutput.js	anyEditsSinceMouseDown	739	var	var anyEditsSinceMouseDown = false
+inputoutput.js	onMouseDown	741	function	function onMouseDown(event, wasFiredByTouch = false) {
+inputoutput.js	rightClickCanvas	809	function	function rightClickCanvas(event) {
+inputoutput.js	onMouseUp	818	function	function onMouseUp(event, wasFiredByTouch = false) {
+inputoutput.js	onKeyDown	853	function	function onKeyDown(event) {
+inputoutput.js	relMouseCoords	936	function	function relMouseCoords(event) {
+inputoutput.js	onKeyUp	963	function	function onKeyUp(event) {
+inputoutput.js	onMyFocus	974	function	function onMyFocus(event) {
+inputoutput.js	onMyBlur	980	function	function onMyBlur(event) {
+inputoutput.js	mouseCoordX	986	var	var mouseCoordX = 0
+inputoutput.js	mouseCoordY	987	var	var mouseCoordY = 0
+inputoutput.js	mousePixelX	988	var	var mousePixelX = 0
+inputoutput.js	mousePixelY	989	var	var mousePixelY = 0
+inputoutput.js	setMouseCoord	991	function	function setMouseCoord(e) {
+inputoutput.js	mouseMove	1004	function	function mouseMove(event) {
+inputoutput.js	mouseInCanvas	1044	let	let mouseInCanvas = false
+inputoutput.js	onMouseIn	1046	function	function onMouseIn() {
+inputoutput.js	onMouseOut	1051	function	function onMouseOut() {
+inputoutput.js	onTouchDown	1060	function	function onTouchDown(event) {
+inputoutput.js	onTouchUp	1064	function	function onTouchUp(event) {
+inputoutput.js	onMouseWheel	1081	function	function onMouseWheel(event) {
+inputoutput.js	levelSelectScroll	1106	function	function levelSelectScroll(direction) {
+inputoutput.js	clamp	1121	function	function clamp(number, min, max) {
+inputoutput.js	prevent	1125	function	function prevent(e) {
+inputoutput.js	titleButtonSelected	1133	function	function titleButtonSelected() {
+inputoutput.js	gamepadKeys	1147	var	var gamepadKeys = [] // used to store keys held at previous frame
+inputoutput.js	pollGamepads	1149	function	function pollGamepads() {
+inputoutput.js	checkKey	1288	function	function checkKey(e, justPressed) {
+inputoutput.js	update	1585	function	function update() {
+inputoutput.js	looping	1679	var	var looping = false
+inputoutput.js	loop	1681	var	var loop = function () {
+console.js	jumpToLine	0	function	function jumpToLine(i) {
+console.js	consolecache	26	var	var consolecache = []
+console.js	consolePrintFromRule	28	function	function consolePrintFromRule(text, rule, urgent) {
+console.js	consolePrint	53	function	function consolePrint(text, urgent, linenumber, inspect_ID) {
+console.js	cache_n	66	var	var cache_n = 0
+console.js	addToConsole	68	function	function addToConsole(text) {
+console.js	consoleCacheDump	81	function	function consoleCacheDump() {
+console.js	consoleError	163	function	function consoleError(text) {
+console.js	clearConsole	167	function	function clearConsole() {
+console.js	clearConsoleClick	179	var	var clearConsoleClick = document.getElementById("clearConsoleClick")
+console.js	verboseToggle	182	function	function verboseToggle() {
+console.js	verboseLoggingClick	199	var	var verboseLoggingClick = document.getElementById("verboseLoggingClick")
+buildStandalone.js	get_blob	2	var	var get_blob = function () {
+buildStandalone.js	standalone_HTML_String	6	var	var standalone_HTML_String = ""
+buildStandalone.js	clientStandaloneRequest	8	var	var clientStandaloneRequest = new XMLHttpRequest()
+buildStandalone.js	buildStandalone	27	function	function buildStandalone(sourceCode) {
+engine.js	onLevelRestarted	0	var	var onLevelRestarted = new Event("levelRestarted")
+engine.js	RandomGen	2	var	var RandomGen = new RNG()
+engine.js	intro_template	4	var	var intro_template = [
+engine.js	sitelock_template	20	var	var sitelock_template = [
+engine.js	messagecontainer_template	36	var	var messagecontainer_template = [
+engine.js	messagecontainer_template_mouse	52	var	var messagecontainer_template_mouse = [
+engine.js	titletemplate_firstgo	68	var	var titletemplate_firstgo = [
+engine.js	titletemplate_firstgo_selected	84	var	var titletemplate_firstgo_selected = [
+engine.js	titletemplate_empty	100	var	var titletemplate_empty = [
+engine.js	title_options	116	var	var title_options = [
+engine.js	MENUITEM_CONTINUE	143	var	var MENUITEM_CONTINUE = 0
+engine.js	MENUITEM_LEVELSELECT	144	var	var MENUITEM_LEVELSELECT = 1
+engine.js	MENUITEM_SETTINGS	145	var	var MENUITEM_SETTINGS = 2
+engine.js	MENUITEM_NEWGAME	146	var	var MENUITEM_NEWGAME = 3
+engine.js	MENUITEMVERSION_IDLE	148	var	var MENUITEMVERSION_IDLE = 0
+engine.js	MENUITEMVERSION_HIGHLIGHTED	149	var	var MENUITEMVERSION_HIGHLIGHTED = 1
+engine.js	MENUITEMVERSION_SELECTED	150	var	var MENUITEMVERSION_SELECTED = 2
+engine.js	MENUITEMVERSION_HOVERED	151	var	var MENUITEMVERSION_HOVERED = 3
+engine.js	titleImage	153	var	var titleImage = []
+engine.js	titleWidth	154	var	var titleWidth = titletemplate_empty[0].length
+engine.js	titleHeight	155	var	var titleHeight = titletemplate_empty.length
+engine.js	textMode	156	var	var textMode = true
+engine.js	titleScreen	157	var	var titleScreen = true
+engine.js	titleMode	158	var	var titleMode = 0 //1 means title screen with options, 2 means level select
+engine.js	titleSelection	159	var	var titleSelection = 0
+engine.js	titleSelectOptions	160	var	var titleSelectOptions = 2
+engine.js	titleAvailableOptions	161	var	var titleAvailableOptions = []
+engine.js	titleSelected	162	var	var titleSelected = false
+engine.js	hoverSelection	163	var	var hoverSelection = -1 //When mouse controls are enabled, over which row the mouse is hovering. -1 when disabled.
+engine.js	showContinueOptionOnTitleScreen	165	function	function showContinueOptionOnTitleScreen() {
+engine.js	hasStartedTheGame	173	function	function hasStartedTheGame() {
+engine.js	hasSolvedAtLeastOneSection	177	function	function hasSolvedAtLeastOneSection() {
+engine.js	unloadGame	185	function	function unloadGame() {
+engine.js	isContinueOptionSelected	195	function	function isContinueOptionSelected() {
+engine.js	isNewGameOptionSelected	203	function	function isNewGameOptionSelected() {
+engine.js	isLevelSelectOptionSelected	216	function	function isLevelSelectOptionSelected() {
+engine.js	generateTitleScreen	231	function	function generateTitleScreen() {
+engine.js	levelSelectScrollPos	427	var	var levelSelectScrollPos = 0
+engine.js	gotoLevelSelectScreen	429	function	function gotoLevelSelectScreen() {
+engine.js	generateLevelSelectScreen	462	function	function generateLevelSelectScreen() {
+engine.js	gotoLevel	630	function	function gotoLevel(sectionIndex) {
+engine.js	introstate	654	var	var introstate = {
+engine.js	state	664	var	var state = introstate
+engine.js	deepClone	666	function	function deepClone(item) {
+engine.js	wordwrap	720	function	function wordwrap(str, width, handleNewlines = false) {
+engine.js	splitMessage	751	var	var splitMessage = []
+engine.js	drawMessageScreen	753	function	function drawMessageScreen() {
+engine.js	loadedLevelSeed	838	var	var loadedLevelSeed = 0
+engine.js	loadLevelFromLevelDat	840	function	function loadLevelFromLevelDat(state, leveldat, randomseed, clearinputhistory) {
+engine.js	loadLevelFromStateTarget	923	function	function loadLevelFromStateTarget(state, levelindex, target, randomseed) {
+engine.js	loadLevelFromState	939	function	function loadLevelFromState(state, levelindex, randomseed) {
+engine.js	sprites	957	var	var sprites = [
+engine.js	loadedCustomFont	980	let	let loadedCustomFont = false
+engine.js	tryLoadCustomFont	982	function	function tryLoadCustomFont() {
+engine.js	tryPlaySimpleSound	1018	function	function tryPlaySimpleSound(soundname) {
+engine.js	tryPlayTitleSound	1024	function	function tryPlayTitleSound() {
+engine.js	tryPlayStartGameSound	1028	function	function tryPlayStartGameSound() {
+engine.js	tryPlayEndGameSound	1032	function	function tryPlayEndGameSound() {
+engine.js	tryPlayCancelSound	1036	function	function tryPlayCancelSound() {
+engine.js	tryPlayStartLevelSound	1040	function	function tryPlayStartLevelSound() {
+engine.js	tryPlayEndLevelSound	1044	function	function tryPlayEndLevelSound() {
+engine.js	tryPlayUndoSound	1048	function	function tryPlayUndoSound() {
+engine.js	tryPlayRestartSound	1052	function	function tryPlayRestartSound() {
+engine.js	tryPlayShowMessageSound	1056	function	function tryPlayShowMessageSound() {
+engine.js	tryPlayCloseMessageSound	1060	function	function tryPlayCloseMessageSound() {
+engine.js	backups	1064	var	var backups = []
+engine.js	restartTarget	1065	var	var restartTarget
+engine.js	backupLevel	1067	function	function backupLevel() {
+engine.js	level4Serialization	1083	function	function level4Serialization() {
+engine.js	tryDeactivateYoutube	1094	function	function tryDeactivateYoutube() {
+engine.js	tryActivateYoutube	1101	function	function tryActivateYoutube() {
+engine.js	setGameState	1128	function	function setGameState(_state, command, randomseed) {
+engine.js	RebuildLevelArrays	1326	function	function RebuildLevelArrays() {
+engine.js	messagetext	1381	var	var messagetext = ""
+engine.js	currentMovedEntities	1382	var	var currentMovedEntities = {}
+engine.js	newMovedEntities	1383	var	var newMovedEntities = {}
+engine.js	applyDiff	1385	function	function applyDiff(diff, level_objects) {
+engine.js	unconsolidateDiff	1401	function	function unconsolidateDiff(before, after) {
+engine.js	restoreLevel	1420	function	function restoreLevel(
+engine.js	zoomscreen	1492	var	var zoomscreen = false
+engine.js	flickscreen	1493	var	var flickscreen = false
+engine.js	smoothscreen	1494	var	var smoothscreen = false
+engine.js	screenwidth	1495	var	var screenwidth = 0
+engine.js	screenheight	1496	var	var screenheight = 0
+engine.js	consolidateDiff	1499	function	function consolidateDiff(before, after) {
+engine.js	addUndoState	1564	function	function addUndoState(state) {
+engine.js	DoRestart	1577	function	function DoRestart(force) {
+engine.js	backupDiffers	1610	function	function backupDiffers() {
+engine.js	DoUndo	1628	function	function DoUndo(
+engine.js	getPlayerPositions	1658	function	function getPlayerPositions() {
+engine.js	getLayersOfMask	1670	function	function getLayersOfMask(cellMask) {
+engine.js	moveEntitiesAtIndex	1682	function	function moveEntitiesAtIndex(positionIndex, entityMask, dirMask) {
+engine.js	startMovement	1700	function	function startMovement(dir) {
+engine.js	dirMasksDelta	1710	var	var dirMasksDelta = {
+engine.js	dirMaskName	1720	var	var dirMaskName = {
+engine.js	seedsToPlay_CanMove	1730	var	var seedsToPlay_CanMove = []
+engine.js	seedsToPlay_CantMove	1731	var	var seedsToPlay_CantMove = []
+engine.js	repositionEntitiesOnLayer	1733	function	function repositionEntitiesOnLayer(positionIndex, layer, dirMask) {
+engine.js	repositionEntitiesAtCell	1795	function	function repositionEntitiesAtCell(positionIndex) {
+engine.js	Level	1827	function	function Level(lineNumber, width, height, layerCount, objects, section) {
+engine.js	_movementVecs	1876	var	var _movementVecs
+engine.js	_movementVecIndex	1877	var	var _movementVecIndex = 0
+engine.js	ellipsisPattern	1912	var	var ellipsisPattern = ["ellipsis"]
+engine.js	BitVec	1914	function	function BitVec(init) {
+engine.js	Rule	2037	function	function Rule(rule) {
+engine.js	cellRowMatchesWildcardFunctionGenerate	2180	function	function cellRowMatchesWildcardFunctionGenerate(direction,cellRow,i, maxk, mink) {
+engine.js	STRIDE_OBJ	2212	var	var STRIDE_OBJ = 1
+engine.js	STRIDE_MOV	2213	var	var STRIDE_MOV = 1
+engine.js	CellPattern	2215	function	function CellPattern(row) {
+engine.js	CellReplacement	2225	function	function CellReplacement(row) {
+engine.js	matchCache	2235	var	var matchCache = {}
+engine.js	_o1	2312	var	var _o1
+engine.js	_o2	2313	var	var _o2
+engine.js	_o2_5	2314	var	var _o2_5
+engine.js	_o3	2315	var	var _o3
+engine.js	_o4	2316	var	var _o4
+engine.js	_o5	2317	var	var _o5
+engine.js	_o6	2318	var	var _o6
+engine.js	_o7	2319	var	var _o7
+engine.js	_o8	2320	var	var _o8
+engine.js	_o9	2321	var	var _o9
+engine.js	_o10	2322	var	var _o10
+engine.js	_o11	2323	var	var _o11
+engine.js	_o12	2324	var	var _o12
+engine.js	_m1	2325	var	var _m1
+engine.js	_m2	2326	var	var _m2
+engine.js	_m3	2327	var	var _m3
+engine.js	cellRowMatchesWildcardFunctionGenerate	2449	function	function cellRowMatchesWildcardFunctionGenerate(direction,cellRow,i, maxk, mink) {
+engine.js	DoesCellRowMatchWildCard	2463	function	function DoesCellRowMatchWildCard(direction,cellRow,i,maxk,mink) {
+engine.js	cellRowMatchesFunctionGenerate	2512	function	function cellRowMatchesFunctionGenerate(direction,cellRow,i) {
+engine.js	DoesCellRowMatch	2519	function	function DoesCellRowMatch(direction,cellRow,i,k) {
+engine.js	matchCellRow	2549	function	function matchCellRow(
+engine.js	matchCellRowWildCard	2660	function	function matchCellRowWildCard(
+engine.js	generateTuples	2775	function	function generateTuples(lists) {
+engine.js	twiddleMetadataExtras	3077	function	function twiddleMetadataExtras(resetAutoTick = true) {
+engine.js	showTempMessage	3119	function	function showTempMessage() {
+engine.js	processOutputCommands	3135	function	function processOutputCommands(commands) {
+engine.js	applyRandomRuleGroup	3150	function	function applyRandomRuleGroup(level, ruleGroup) {
+engine.js	applyRuleGroup	3183	function	function applyRuleGroup(ruleGroup) {
+engine.js	applyRules	3227	function	function applyRules(rules, loopPoint, startRuleGroupindex, bannedGroup) {
+engine.js	resolveMovements	3293	function	function resolveMovements(level, bannedGroup) {
+engine.js	sfxCreateMask	3354	var	var sfxCreateMask = null
+engine.js	sfxDestroyMask	3355	var	var sfxDestroyMask = null
+engine.js	calculateRowColMasks	3357	function	function calculateRowColMasks() {
+engine.js	playerPositions	3393	var	var playerPositions
+engine.js	playerPositionsAtTurnStart	3394	var	var playerPositionsAtTurnStart
+engine.js	processInput	3397	function	function processInput(dir, dontDoWin, dontModify, bak) {
+engine.js	checkWin	3818	function	function checkWin(dontDoWin) {
+engine.js	DoWin	3919	function	function DoWin() {
+engine.js	anyMovements	3936	function	function anyMovements() { 
+engine.js	nextLevel	3945	function	function nextLevel() {
+engine.js	loadLevelFromStateOrTarget	4041	function	function loadLevelFromStateOrTarget() {
+engine.js	goToTitleScreen	4049	function	function goToTitleScreen() {
+engine.js	resetFlickDat	4069	function	function resetFlickDat() {
+engine.js	updateLocalStorage	4080	function	function updateLocalStorage() {
+engine.js	setSectionSolved	4093	function	function setSectionSolved(section) {
+engine.js	clearLocalStorage	4117	function	function clearLocalStorage() {
+engine.js	cameraPositionTarget	4131	var	var cameraPositionTarget = null
+engine.js	cameraPosition	4133	var	var cameraPosition = {
+engine.js	initSmoothCamera	4138	function	function initSmoothCamera() {
+engine.js	getCameraPosition	4180	function	function getCameraPosition(targetPosition, levelDimension, screenDimension) {
+engine.js	getFlickCameraPosition	4187	function	function getFlickCameraPosition(
+engine.js	updateCameraPositionTarget	4214	function	function updateCameraPositionTarget() {
+engine.js	IsMouseGameInputEnabled	4258	function	function IsMouseGameInputEnabled() {
+parser.js	compiling	22	var	var compiling = false
+parser.js	errorStrings	23	var	var errorStrings = [] //also stores warning strings
+parser.js	errorCount	24	var	var errorCount = 0 //only counts errors
+parser.js	twiddleable_params	26	var	var twiddleable_params = [
+parser.js	logErrorCacheable	40	function	function logErrorCacheable(str, lineNumber, urgent) {
+parser.js	logError	64	function	function logError(str, lineNumber, urgent) {
+parser.js	logWarning	88	function	function logWarning(str, lineNumber, urgent) {
+parser.js	logWarningNoLine	111	function	function logWarningNoLine(str, urgent, increaseErrorCount = true) {
+parser.js	logErrorNoLine	126	function	function logErrorNoLine(str, urgent) {
+parser.js	logBetaMessage	139	function	function logBetaMessage(str, urgent) {
+parser.js	blankLineHandle	151	function	function blankLineHandle(state) {
+parser.js	codeMirrorFn	187	var	var codeMirrorFn = function () {
+editor.js	CodeMirror	0	const	const CodeMirror = window.CodeMirror
+editor.js	code	2	var	var code = document.getElementById("code")
+editor.js	_editorDirty	3	var	var _editorDirty = false
+editor.js	_editorCleanState	4	var	var _editorCleanState = ""
+editor.js	fileToOpen	6	var	var fileToOpen = getParameterByName("demo")
+editor.js	editor	114	var	var editor = window.CodeMirror.fromTextArea(code, {
+editor.js	checkEditorDirty	144	function	function checkEditorDirty() {
+editor.js	setEditorClean	160	function	function setEditorClean() {
+editor.js	mapObj	177	var	var mapObj = {
+editor.js	getParameterByName	196	function	function getParameterByName(name) {
+editor.js	tryLoadGist	205	function	function tryLoadGist(id) {
+editor.js	tryLoadFile	259	function	function tryLoadFile(fileName) {
+editor.js	canExit	276	function	function canExit() {
+editor.js	dropdownChange	286	function	function dropdownChange() {
+editor.js	debugPreview	306	function	function debugPreview(turnIndex, lineNumber) {
+editor.js	debugUnpreview	311	function	function debugUnpreview() {
+editor.js	addToDebugTimeline	316	function	function addToDebugTimeline(level, lineNumber) {
+compiler.js	CodeMirror	0	const	const CodeMirror = window.CodeMirror
+compiler.js	isColor	4	function	function isColor(str) {
+compiler.js	colorToHex	13	function	function colorToHex(palette, str) {
+compiler.js	generateSpriteMatrix	22	function	function generateSpriteMatrix(dat) {
+compiler.js	debugMode	39	var	var debugMode
+compiler.js	colorPalette	40	var	var colorPalette
+compiler.js	generateExtraMembers	42	function	function generateExtraMembers(state) {
+compiler.js	generateExtraMembersPart2	501	function	function generateExtraMembersPart2(state) {
+compiler.js	levelFromString	580	function	function levelFromString(state, level) {
+compiler.js	levelsToArray	642	function	function levelsToArray(state) {
+compiler.js	extractSections	698	function	function extractSections(state) {
+compiler.js	convertSectionNamesToIndices	724	function	function convertSectionNamesToIndices(state) {
+compiler.js	directionaggregates	792	var	var directionaggregates = {
+compiler.js	relativeDirections	805	var	var relativeDirections = ["^", "v", "<", ">", "perpendicular", "parallel"]
+compiler.js	simpleAbsoluteDirections	806	var	var simpleAbsoluteDirections = ["up", "down", "left", "right"]
+compiler.js	simpleRelativeDirections	807	var	var simpleRelativeDirections = ["^", "v", "<", ">"]
+compiler.js	reg_directions_only	808	var	var reg_directions_only =
+compiler.js	commandwords	811	var	var commandwords = [
+compiler.js	directionalRule	845	function	function directionalRule(rule) {
+compiler.js	findIndexAfterToken	877	function	function findIndexAfterToken(str, tokens, tokenIndex) {
+compiler.js	rightBracketToRightOf	886	function	function rightBracketToRightOf(tokens, i) {
+compiler.js	processRuleString	895	function	function processRuleString(rule, state, curRules) {
+compiler.js	deepCloneHS	1285	function	function deepCloneHS(HS) {
+compiler.js	deepCloneRule	1294	function	function deepCloneRule(rule) {
+compiler.js	rulesToArray	1310	function	function rulesToArray(state) {
+compiler.js	containsEllipsis	1383	function	function containsEllipsis(rule) {
+compiler.js	rewriteUpLeftRules	1392	function	function rewriteUpLeftRules(rule) {
+compiler.js	getPossibleObjectsFromCell	1414	function	function getPossibleObjectsFromCell(state, cell) {
+compiler.js	getPropertiesFromCell	1432	function	function getPropertiesFromCell(state, cell) {
+compiler.js	getMovings	1448	function	function getMovings(state, cell) {
+compiler.js	concretizePropertyInCell	1460	function	function concretizePropertyInCell(cell, property, concreteType) {
+compiler.js	concretizeMovingInCell	1468	function	function concretizeMovingInCell(
+compiler.js	concretizeMovingInCellByAmbiguousMovementName	1481	function	function concretizeMovingInCellByAmbiguousMovementName(
+compiler.js	expandNoPrefixedProperties	1493	function	function expandNoPrefixedProperties(state, cell) {
+compiler.js	concretizePropertyRule	1514	function	function concretizePropertyRule(state, rule, lineNumber) {
+compiler.js	makeSpawnedObjectsStationary	1682	function	function makeSpawnedObjectsStationary(state, rule, lineNumber) {
+compiler.js	concretizeMovingRule	1718	function	function concretizeMovingRule(state, rule, lineNumber) {
+compiler.js	rephraseSynonyms	1964	function	function rephraseSynonyms(state, rule) {
+compiler.js	atomizeAggregates	1989	function	function atomizeAggregates(state, rule) {
+compiler.js	atomizeCellAggregates	2006	function	function atomizeCellAggregates(state, cell, lineNumber) {
+compiler.js	convertRelativeDirsToAbsolute	2029	function	function convertRelativeDirsToAbsolute(rule) {
+compiler.js	relativeDirs	2047	var	var relativeDirs = ["^", "v", "<", ">", "parallel", "perpendicular"] //used to index the following
+compiler.js	relativeDict	2049	var	var relativeDict = {
+compiler.js	absolutifyRuleCell	2056	function	function absolutifyRuleCell(forward, cell) {
+compiler.js	dirMasks	2074	var	var dirMasks = {
+compiler.js	rulesToMask	2087	function	function rulesToMask(state) {
+compiler.js	cellRowMasks	2423	function	function cellRowMasks(rule) {
+compiler.js	cellRowMasks_Movements	2438	function	function cellRowMasks_Movements(rule) {
+compiler.js	collapseRules	2453	function	function collapseRules(groups) {
+compiler.js	ruleGroupDiscardOverlappingTest	2499	function	function ruleGroupDiscardOverlappingTest(ruleGroup) {
+compiler.js	arrangeRulesByGroupNumber	2530	function	function arrangeRulesByGroupNumber(state) {
+compiler.js	generateRigidGroupList	2572	function	function generateRigidGroupList(state) {
+compiler.js	getMaskFromName	2610	function	function getMaskFromName(state, name) {
+compiler.js	generateMasks	2649	function	function generateMasks(state) {
+compiler.js	checkObjectsAreLayered	2710	function	function checkObjectsAreLayered(state) {
+compiler.js	twiddleMetaData	2739	function	function twiddleMetaData(state, update = false) {
+compiler.js	processWinConditions	2867	function	function processWinConditions(state) {
+compiler.js	printCellRow	2925	function	function printCellRow(cellRow) {
+compiler.js	cacheRuleStringRep	2946	function	function cacheRuleStringRep(rule) {
+compiler.js	cacheAllRuleNames	2994	function	function cacheAllRuleNames(state) {
+compiler.js	printRules	3001	function	function printRules(state) {
+compiler.js	removeDuplicateRules	3042	function	function removeDuplicateRules(state) {
+compiler.js	generateLoopPoints	3062	function	function generateLoopPoints(state) {
+compiler.js	soundEvents	3165	var	var soundEvents = [
+compiler.js	soundMaskedEvents	3188	var	var soundMaskedEvents = ["create", "destroy", "move", "cantmove", "action"]
+compiler.js	soundVerbs	3189	var	var soundVerbs = soundEvents.concat(soundMaskedEvents)
+compiler.js	validSeed	3191	function	function validSeed(seed) {
+compiler.js	soundDirectionIndicatorMasks	3195	var	var soundDirectionIndicatorMasks = {
+compiler.js	soundDirectionIndicators	3206	var	var soundDirectionIndicators = [
+compiler.js	generateSoundData	3217	function	function generateSoundData(state) {
+compiler.js	formatHomePage	3383	function	function formatHomePage(state) {
+compiler.js	MAX_ERRORS	3443	var	var MAX_ERRORS = 5
+compiler.js	loadFile	3445	function	function loadFile(str) {
+compiler.js	ifrm	3531	var	var ifrm
+compiler.js	compile	3533	function	function compile(command, text, randomseed) {
+compiler.js	qualifyURL	3691	function	function qualifyURL(url) {
+compiler.js	isSitelocked	3697	function	function isSitelocked() {
+soundbar.js	audio	0	var	var audio
+soundbar.js	newSound	2	function	function newSound(instrument) {
+soundbar.js	buttonPress	26	function	function buttonPress() {
+toolbar.js	maximumsavedprojects	4	const	const maximumsavedprojects = 50
+toolbar.js	solveClick	6	function	function solveClick() {
+toolbar.js	runClick	16	function	function runClick() {
+toolbar.js	cancelClick	21	function	function cancelClick() {
+toolbar.js	dateToReadable	25	function	function dateToReadable(title, time) {
+toolbar.js	saveClick	54	function	function saveClick() {
+toolbar.js	loadDropDownChange	133	function	function loadDropDownChange() {
+toolbar.js	repopulateSaveDropdown	168	function	function repopulateSaveDropdown(saves) {
+toolbar.js	loadDropdown	201	var	var loadDropdown = document.getElementById("loadDropDown")
+toolbar.js	levelEditorClick_Fn	204	function	function levelEditorClick_Fn() {
+toolbar.js	HOSTPAGEURL	218	const	const HOSTPAGEURL = "https://auroriax.github.io/PuzzleScript"
+toolbar.js	PSFORKNAME	219	const	const PSFORKNAME = "Puzzlescript Plus"
+toolbar.js	getAuthURL	223	function	function getAuthURL() {
+toolbar.js	printUnauthorized	236	function	function printUnauthorized() {
+toolbar.js	shareClick	250	function	function shareClick() {
+toolbar.js	githubLogOut	364	function	function githubLogOut() {
+toolbar.js	rebuildClick	381	function	function rebuildClick() {
+toolbar.js	post_to_url	385	function	function post_to_url(path, params, method) {
+toolbar.js	exportClick	409	function	function exportClick() {
+layout.js	soundbarwidth	0	var	var soundbarwidth = 100
+layout.js	lowerbarheight	1	var	var lowerbarheight = document.getElementById("soundbar").clientHeight
+layout.js	upperbarheight	2	var	var upperbarheight = document.getElementById("uppertoolbar").clientHeight
+layout.js	winwidth	3	var	var winwidth = window.innerWidth
+layout.js	winheight	4	var	var winheight = window.innerHeight
+layout.js	verticaldragbarWidth	5	var	var verticaldragbarWidth =
+layout.js	horizontaldragbarHeight	7	var	var horizontaldragbarHeight =
+layout.js	minimumDimension	9	var	var minimumDimension = 100
+layout.js	resize_widths	11	function	function resize_widths(verticaldragbarX) {
+layout.js	resize_heights	24	function	function resize_heights(horizontaldragbarY) {
+layout.js	resize_all	39	function	function resize_all(e) {
+layout.js	verticalDragbarMouseDown	86	function	function verticalDragbarMouseDown(e) {
+layout.js	verticalDragbarMouseMove	93	function	function verticalDragbarMouseMove(e) {
+layout.js	verticalDragbarMouseUp	103	function	function verticalDragbarMouseUp(e) {
+layout.js	horizontalDragbarMouseDown	108	function	function horizontalDragbarMouseDown(e) {
+layout.js	horizontalDragbarMouseMove	115	function	function horizontalDragbarMouseMove(e) {
+layout.js	horizontalDragbarMouseUp	125	function	function horizontalDragbarMouseUp(e) {
+layout.js	reset_panels	130	function	function reset_panels() {
+addlisteners.js	el	4	var	var el = document.getElementById("gameCanvas");
+addlisteners_editor.js	solveClickLink	17	var	var solveClickLink = document.getElementById("solveClickLink")
+addlisteners_editor.js	cancelClickLink	20	var	var cancelClickLink = document.getElementById("cancelClickLink")
+addlisteners_editor.js	runClickLink	23	var	var runClickLink = document.getElementById("runClickLink")
+addlisteners_editor.js	saveClickLink	26	var	var saveClickLink = document.getElementById("saveClickLink")
+addlisteners_editor.js	rebuildClickLink	29	var	var rebuildClickLink = document.getElementById("rebuildClickLink")
+addlisteners_editor.js	shareClickLink	32	var	var shareClickLink = document.getElementById("shareClickLink")
+addlisteners_editor.js	levelEditorClickLink	35	var	var levelEditorClickLink = document.getElementById("levelEditorClickLink")
+addlisteners_editor.js	exportClickLink	38	var	var exportClickLink = document.getElementById("exportClickLink")
+addlisteners_editor.js	exampleDropdown	41	var	var exampleDropdown = document.getElementById("exampleDropdown")
+addlisteners_editor.js	loadDropDown	44	var	var loadDropDown = document.getElementById("loadDropDown")
+addlisteners_editor.js	horizontalDragbar	47	var	var horizontalDragbar = document.getElementById("horizontaldragbar")
+addlisteners_editor.js	verticalDragbar	54	var	var verticalDragbar = document.getElementById("verticaldragbar")
+addlisteners_editor.js	gestureHandler	76	var	var gestureHandler = Mobile.enable()
+makegif.js	makeGIF	2	function	function makeGIF() {
+solver.js	abortSolver	2	var	var abortSolver = false
+solver.js	solving	3	var	var solving = false
+solver.js	timeout	5	const	const timeout = (ms) => new Promise((res) => setTimeout(res, ms))
+solver.js	byScoreAndLength	7	function	function byScoreAndLength(a, b) {
+solver.js	distanceTable	15	var	var distanceTable
+solver.js	solve	17	function	async function solve() {
+solver.js	stopSolving	196	function	function stopSolving() {
+solver.js	chunkString	200	function	function chunkString(str, length) {
+solver.js	shuffleALittle	204	function	function shuffleALittle(array) {
+solver.js	distance	211	function	function distance(index1, index2) {
+solver.js	precalcDistances	219	function	function precalcDistances() {
+solver.js	getScore	230	function	function getScore() {
