@@ -4,6 +4,8 @@ import { savePlainTextFile } from "./lib/save-file"
 import { GIFEncoder } from "./lib/jsgif"
 import FastPriorityQueue from "./lib/FastPriorityQueue"
 
+var CodeMirror = window.CodeMirror
+
 // @@begin js/storagewrapper.js
 function storage_has(key) {
   return localStorage.getItem(key) !== null
@@ -4783,7 +4785,7 @@ function FastBase64_Encode(src) {
   var dst = ""
   var i = 0
   while (len > 2) {
-    n = (src[i] << 16) | (src[i + 1] << 8) | src[i + 2]
+    let n = (src[i] << 16) | (src[i + 1] << 8) | src[i + 2]
     dst += FastBase64_encLookup[n >> 12] + FastBase64_encLookup[n & 0xfff]
     len -= 3
     i += 3
@@ -4871,10 +4873,6 @@ function MakeRiff(sampleRate, bitsPerSample, data) {
   return result
 }
 
-if (typeof exports != "undefined")
-  // For node.js
-  exports.RIFFWAVE = RIFFWAVE
-
 // @@end js/riffwave.js
 
 // @@begin js/sfxr.js
@@ -4898,8 +4896,6 @@ function checkAudioContextExists() {
     if (AUDIO_CONTEXT == null) {
       if (typeof AudioContext != "undefined") {
         AUDIO_CONTEXT = new AudioContext()
-      } else if (typeof webkitAudioContext != "undefined") {
-        AUDIO_CONTEXT = new webkitAudioContext()
       }
     }
   } catch (ex) {
@@ -5314,7 +5310,7 @@ function powerUp() {
 }
 
 function hitHurt() {
-  result = Params()
+  let result = Params()
   result.wave_type = rnd(2)
   if (result.wave_type === SINE) result.wave_type = NOISE
   if (result.wave_type === SQUARE) result.p_duty = frnd(0.6)
@@ -5329,7 +5325,7 @@ function hitHurt() {
 }
 
 function jump() {
-  result = Params()
+  let result = Params()
   result.wave_type = SQUARE
   result.wave_type = Math.floor(frnd(SHAPES.length))
   if (result.wave_type === 3) {
@@ -5347,7 +5343,7 @@ function jump() {
 }
 
 function blipSelect() {
-  result = Params()
+let  result = Params()
   result.wave_type = rnd(1)
   result.wave_type = Math.floor(frnd(SHAPES.length))
   if (result.wave_type === 3) {
@@ -5363,7 +5359,7 @@ function blipSelect() {
 }
 
 function random() {
-  result = Params()
+let  result = Params()
   result.wave_type = Math.floor(frnd(SHAPES.length))
   result.p_base_freq = Math.pow(frnd(2.0) - 1.0, 2.0)
   if (rnd(1)) result.p_base_freq = Math.pow(frnd(2.0) - 1.0, 3.0) + 0.5
@@ -5732,7 +5728,7 @@ window.console.log(psstring);*/
       } else if (ps.wave_type === BREAKER) {
         sub_sample = Math.abs(1 - fp * fp * 2) - 1
       } else {
-        throw new Exception("bad wave type! " + ps.wave_type)
+        throw new Error("bad wave type! " + ps.wave_type)
       }
 
       // Low-pass filter
@@ -6494,7 +6490,7 @@ function generateGlyphImages() {
   glyphImagesCorrespondance = []
   glyphImages = []
 
-  seenobjects = {}
+  let seenobjects = {}
   for (var n in state.glyphDict) {
     if (n.length == 1 && state.glyphDict.hasOwnProperty(n)) {
       var g = state.glyphDict[n]
@@ -6653,21 +6649,18 @@ function generateGlyphImages() {
   }
 }
 
-var canvas
-var ctx
 
-var x
-var y
+var x = 0
+var y = 0
 var cellwidth
 var cellheight
 var xoffset
 var yoffset
-
+let screenOffsetX = 0
+let screenOffsetY = 0
+var canvas = document.getElementById("gameCanvas")
+var ctx = canvas.getContext("2d")
 window.addEventListener("resize", canvasResize, false)
-canvas = document.getElementById("gameCanvas")
-ctx = canvas.getContext("2d")
-x = 0
-y = 0
 
 function glyphCount() {
   var count = 0
@@ -6809,7 +6802,7 @@ function redraw() {
       }
     } else if (smoothscreen) {
       if (cameraPositionTarget !== null) {
-        ;["x", "y"].forEach(function (coord) {
+        ["x", "y"].forEach(function (coord) {
           var cameraTargetVector =
             cameraPositionTarget[coord] - cameraPosition[coord]
 
@@ -7472,14 +7465,13 @@ const easingAliases = {
  * Add gesture support for mobile devices.
  */
 
-window.Mobile = {}
+const Mobile = window.Mobile = {}
 
 //stolen from https://github.com/Modernizr/Modernizr/blob/master/feature-detects/touchevents.js
 Mobile.hasTouch = function () {
   var bool
   if (
-    "ontouchstart" in window ||
-    (window.DocumentTouch && document instanceof DocumentTouch)
+    "ontouchstart" in window
   ) {
     bool = true
   } else {
@@ -7829,7 +7821,7 @@ Mobile.debugDot = function (event) {
     } else if (distance < SWIPE_DISTANCE) {
       // Now that they've committed to the swipe, look for misfires...
 
-      direction = this.dominantDirection(this.firstPos, currentPos)
+      let direction = this.dominantDirection(this.firstPos, currentPos)
       // Cancel the swipe if the direction changes.
       if (direction !== this.swipeDirection) {
         this.mayBeSwiping = false
@@ -8241,7 +8233,7 @@ Mobile.debugDot = function (event) {
   }
 })(window.Mobile.GestureHandler.prototype)
 
-window.Animator = function () {
+let Animator = window.Animator = function () {
   this.initialize.apply(this, arguments)
 }
 
@@ -8292,13 +8284,13 @@ window.Animator = function () {
       this._isAnimating = false
     }
   }
-})(window.Animator.prototype)
+})(Animator.prototype)
 
-window.Animator.getInstance = function () {
-  if (!window.Animator._instance) {
-    window.Animator._instance = new window.Animator()
+Animator.getInstance = function () {
+  if (!Animator._instance) {
+    Animator._instance = new Animator()
   }
-  return window.Animator._instance
+  return Animator._instance
 }
 
 function Animatable(key, increment, update) {
@@ -8348,48 +8340,48 @@ function Animatable(key, increment, update) {
 
 // MIT license
 
-;(function () {
+(function () {
   "use strict"
 
   var VENDORS = ["ms", "moz", "webkit", "o"]
   var index, lastTime
 
-  for (
-    index = 0;
-    index < VENDORS.length && !window.requestAnimationFrame;
-    index++
-  ) {
-    window.requestAnimationFrame =
-      window[VENDORS[index] + "RequestAnimationFrame"]
-    window.cancelAnimationFrame =
-      window[VENDORS[index] + "CancelAnimationFrame"]
-    if (!window.cancelAnimationFrame) {
-      window.cancelAnimationFrame =
-        window[VENDORS[index] + "CancelRequestAnimationFrame"]
-    }
-  }
+  // for (
+  //   index = 0;
+  //   index < VENDORS.length && !window.requestAnimationFrame;
+  //   index++
+  // ) {
+  //   window.requestAnimationFrame =
+  //     window[VENDORS[index] + "RequestAnimationFrame"]
+  //   window.cancelAnimationFrame =
+  //     window[VENDORS[index] + "CancelAnimationFrame"]
+  //   if (!window.cancelAnimationFrame) {
+  //     window.cancelAnimationFrame =
+  //       window[VENDORS[index] + "CancelRequestAnimationFrame"]
+  //   }
+  // }
 
-  if (!window.requestAnimationFrame) {
-    lastTime = 0
-    window.requestAnimationFrame = function (callback, element) {
-      var currTime, timeToCall, id
+  // if (!window.requestAnimationFrame) {
+  //   lastTime = 0
+  //   window.requestAnimationFrame = function (callback, element) {
+  //     var currTime, timeToCall, id
 
-      currTime = new Date().getTime()
-      timeToCall = Math.max(0, 16 - (currTime - lastTime))
-      id = window.setTimeout(function () {
-        callback(currTime + timeToCall)
-      }, timeToCall)
-      lastTime = currTime + timeToCall
+  //     currTime = new Date().getTime()
+  //     timeToCall = Math.max(0, 16 - (currTime - lastTime))
+  //     id = window.setTimeout(function () {
+  //       callback(currTime + timeToCall)
+  //     }, timeToCall)
+  //     lastTime = currTime + timeToCall
 
-      return id
-    }
-  }
+  //     return id
+  //   }
+  // }
 
-  if (!window.cancelAnimationFrame) {
-    window.cancelAnimationFrame = function (id) {
-      clearTimeout(id)
-    }
-  }
+  // if (!window.cancelAnimationFrame) {
+  //   window.cancelAnimationFrame = function (id) {
+  //     clearTimeout(id)
+  //   }
+  // }
 
   Mobile.enable()
 })()
@@ -8772,7 +8764,7 @@ function getTilesTraversingPoints(x1, y1, x2, y2) {
   //fOfPoint = dirY*cellCenterX - dirX*cellCenterY;
   //isInside = (scaledShiftMin < fOfPoint) == (fOfPoint <= scaledShiftMax);
   function isInside(cellCenterXTimesTwo, cellCenterYTimesTwo) {
-    fOfPointTimesTwo = dirY * cellCenterXTimesTwo - dirX * cellCenterYTimesTwo
+    let fOfPointTimesTwo = dirY * cellCenterXTimesTwo - dirX * cellCenterYTimesTwo
     return (
       scaledShiftATimesTwo < fOfPointTimesTwo ==
       fOfPointTimesTwo <= scaledShiftBTimesTwo
@@ -8799,7 +8791,7 @@ function getTilesTraversingPoints(x1, y1, x2, y2) {
 
     for (var j = yTrimmer; j != cellY2 + ySign; j += ySign) {
       if (j >= level.height || j < 0 || i >= level.width || i < 0) {
-        error =
+        let error =
           "Mouse input loop failed; it:" +
           i +
           " " +
@@ -8845,7 +8837,7 @@ function getTilesTraversingPoints(x1, y1, x2, y2) {
       cellX1 >= level.width ||
       cellX1 < 0
     ) {
-      error =
+      let error =
         "Mouse input loop failed; cell1:" +
         cellX1 +
         " " +
@@ -8858,7 +8850,7 @@ function getTilesTraversingPoints(x1, y1, x2, y2) {
       throw error
     }
 
-    hitObstacle = function () {
+    let hitObstacle = function () {
       var coordIndex =
         screenOffsetY + cellY1 + (screenOffsetX + cellX1) * level.height
       var tile = level.getCell(coordIndex)
@@ -8869,11 +8861,11 @@ function getTilesTraversingPoints(x1, y1, x2, y2) {
       }
     }
 
-    cellCornerXTimesTwo =
+    let cellCornerXTimesTwo =
       cellX1 * 2 * cellwidth + offsetToCenterTimesTwo + xSign * cellwidth
-    cellCornerYTimesTwo =
+    let cellCornerYTimesTwo =
       cellY1 * 2 * cellwidth + offsetToCenterTimesTwo + ySign * cellwidth
-    fOfPointTimesTwo = dirY * cellCornerXTimesTwo - dirX * cellCornerYTimesTwo
+    let fOfPointTimesTwo = dirY * cellCornerXTimesTwo - dirX * cellCornerYTimesTwo
     if ((fOfPointTimesTwo > scaledShiftMid * 2 == ySign > 0) != xSign > 0) {
       cellX1 += xSign
       if (avoidObstacles && hitObstacle()) {
@@ -8905,9 +8897,6 @@ function getTilesTraversingPoints(x1, y1, x2, y2) {
         tileListX[i] !== otherTileListX[i] ||
         tileListY[i] !== otherTileListY[i]
       ) {
-        try {
-          displayError("line tile placement algorithm discrepancies detected")
-        } catch (e) {}
         consolePrint(
           "line tile placement algorithm discrepancies detected",
           true
@@ -8925,6 +8914,7 @@ var x1 = 5
 var y1 = 5
 var x2 = 5
 var y2 = 5
+let amountOfLevelsOnScreen = 0
 
 function mouseAction(event, click, id) {
   if (textMode) {
@@ -9484,7 +9474,7 @@ function onMouseWheel(event) {
   }
 
   //console.log("Scroll "+event.deltaY);
-  normalizedDelta = Math.sign(event.deltaY)
+  let normalizedDelta = Math.sign(event.deltaY)
 
   if (titleScreen && titleMode == 2 && IsMouseGameInputEnabled()) {
     levelSelectScroll(normalizedDelta)
@@ -11120,7 +11110,7 @@ function wordwrap(str, width, handleNewlines = false) {
   if (!handleNewlines) {
     return str.match(RegExp(regex, "g"))
   } else {
-    splitNewlines = str.split("\\n")
+    let splitNewlines = str.split("\\n")
     var splitString = []
 
     splitNewlines.forEach((splitStr) => {
@@ -11775,7 +11765,7 @@ function applyDiff(diff, level_objects) {
     if (copy_length === 0) {
       break //tail of buffer is all 0s
     }
-    for (j = 0; j < copy_length; j++) {
+    for (let j = 0; j < copy_length; j++) {
       level_objects[start_index + j] = diff.dat[index + 2 + j]
     }
     index += 2 + copy_length
@@ -12926,6 +12916,10 @@ function matchCellRow(
   isGlobal
 ) {
   var result = []
+  let xmin
+let xmax
+let ymin
+let ymax
 
   if (
     !cellRowMask.bitsSetInArray(level.mapCellContents.data) ||
@@ -13391,7 +13385,7 @@ Rule.prototype.queueCommands = function () {
       state.metadata.runtime_metadata_twiddling !== undefined &&
       twiddleable_params.includes(command[0])
     ) {
-      value = command[1]
+      let value = command[1]
 
       if (value == "wipe") {
         delete state.metadata[command[0]] //value = undefined;
@@ -13820,7 +13814,7 @@ function processInput(dir, dontDoWin, dontModify, bak) {
       }
     }
 
-    bannedGroup = []
+    let bannedGroup = []
     level.commandQueue = []
     level.commandQueueSourceRules = []
     var startRuleGroupIndex = 0
@@ -14454,7 +14448,7 @@ function setSectionSolved(section) {
   }
 
   try {
-    if (!!window.localStorage) {
+    if (window.localStorage) {
       solvedSections.push(section)
       localStorage.setItem(
         document.URL + "_sections",
@@ -14470,7 +14464,7 @@ function clearLocalStorage() {
   solvedSections = []
 
   try {
-    if (!!window.localStorage) {
+    if (window.localStorage) {
       localStorage.removeItem(document.URL)
       localStorage.removeItem(document.URL + "_checkpoint")
       localStorage.removeItem(document.URL + "_sections")
@@ -14778,7 +14772,7 @@ function blankLineHandle(state) {
 
 //for IE support
 if (typeof Object.assign != "function") {
-  ;(function () {
+  (function () {
     Object.assign = function (target) {
       "use strict"
       // We must check against these specific cases.
@@ -16801,7 +16795,7 @@ function addToDebugTimeline(level, lineNumber) {
 
 // @@begin js/compiler.js
 
-;("use strict")
+("use strict")
 
 function isColor(str) {
   str = str.trim()
@@ -19399,7 +19393,7 @@ function generateRigidGroupList(state) {
   if (rigidGroupIndex_to_GroupIndex.length > 60) {
     logError(
       "There can't be more than 60 rigid groups (rule groups containing rigid members).",
-      rules[0][0][3]
+      // rules[0][0][3] // broken code
     )
   }
 
@@ -20726,7 +20720,7 @@ function loadDropDownChange() {
     )
   }
 
-  saves = JSON.parse(saveString)
+  let saves = JSON.parse(saveString)
 
   for (var i = 0; i < saves.length; i++) {
     var sd = saves[i]
@@ -21259,7 +21253,7 @@ function makeGIF() {
   var inputDat = inputHistory.concat([])
 
   unitTesting = true
-  levelString = compiledText
+  let levelString = compiledText
 
   var encoder = new GIFEncoder()
   encoder.setRepeat(0) //auto-loop
@@ -21450,7 +21444,7 @@ async function solve() {
 
               var action = -1
 
-              for (j = 0; j != act2str.length; j++) {
+              for (let j = 0; j != act2str.length; j++) {
                 if (char == act2str[j]) {
                   action = j
                   break
@@ -21525,8 +21519,8 @@ function chunkString(str, length) {
 }
 
 function shuffleALittle(array) {
-  randomIndex = 1 + Math.floor(Math.random() * (array.length - 1))
-  temporaryValue = array[0]
+  let randomIndex = 1 + Math.floor(Math.random() * (array.length - 1))
+  let temporaryValue = array[0]
   array[0] = array[randomIndex]
   array[randomIndex] = temporaryValue
 }
@@ -21542,7 +21536,7 @@ function distance(index1, index2) {
 function precalcDistances() {
   distanceTable = []
   for (var i = 0; i < level.n_tiles; i++) {
-    ds = []
+    let ds = []
     for (var j = 0; j < level.n_tiles; j++) {
       ds.push(distance(i, j))
     }
